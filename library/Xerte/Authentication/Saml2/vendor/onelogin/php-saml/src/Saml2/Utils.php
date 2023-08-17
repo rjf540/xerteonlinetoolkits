@@ -211,7 +211,7 @@ class Utils
      */
     public static function formatCert($cert, $heads = true)
     {
-        $x509cert = str_replace(array("\x0D", "\r", "\n"), "", $cert);
+        $x509cert = str_replace(array("\x0D", "\r", "\n", "\t", " "), "", $cert);
         if (!empty($x509cert)) {
             $x509cert = str_replace('-----BEGIN CERTIFICATE-----', "", $x509cert);
             $x509cert = str_replace('-----END CERTIFICATE-----', "", $x509cert);
